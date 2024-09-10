@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+    <style>
+        .sticky-nav-trigger {
+            height: 5px;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + .sticky-nav-trigger ~ .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+        .gallery {
+            display: none;
+        }
+
+    </style>
+
+<body class="w-screen h-[2000px] relative overflow-x-hidden">
+
+    <div class=" sticky top-0 z-40 h-9 w-full bg-black text-white text-center pt-2 text-sm">Welcome to Toyota Pakistan</div>
+    <div class="sticky-nav-trigger"></div>
+
+    <!-- navbar starts here -->
+
+    <div class="h-20 w-full navbar z-30 bg-white flex justify-between items-center ">
+        <div class="h-16 w-24 ml-10 lg:ml-40  ">
+            <img src="https://toyota-indus.com/wp-content/uploads/2022/08/ToyotaProductLogo_Primary_Black_RGB-1.png" alt="" class="h-full w-full ">
+        </div>
+        <div class="hidden lg:w-full lg:flex lg:justify-end ">
+            <ul class="flex w-fit justify-between gap-5 bg-white mr-[1%]">
+                <li class="text-base hover:text-red-700 font-medium hover:border-b-red-700"><a href="#">HOME</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">SHOWROOM ▼</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">AFTER SALES ▼</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">CORPORATE</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">CAREERS ▼</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">START YOUR IMPOSSIBLE</a></li>
+                <li class="text-base hover:text-red-700 font-medium"><a href="#">CONTACT US</a></li>
+            </ul> 
+        </div>
+
+        <div class=" h-[30%] w-full flex justify-end mr-[1%]  lg:hidden">
+            <img src="hamburger.png" alt="">
+        </div>
+
+        <div class="h-[40%] w-[10%] bg-[#ff0000] flex justify-center items-center lg:h-full lg:w-28">
+            <img class="h-7 w-100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo33UGFSv_2r0t4F7jyfK0jTjda773JR4eqA&s" alt="">
+        </div>
+
+        
+    </div>
+    
+    <!-- navbar ends here -->
+
+
+    <!-- slider starts here -->
+
+    <div id="default-carousel" class="relative w-full h-fit overflow-x-hidden overflow-y-auto" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative h-[35em] rounded-lg lg:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-1920-x-450-1.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/04/GROUP-800-x-1000.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/04/GROUP-1920-x-450.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/06/Web-Banner-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/06/Web-Banner-1920-x-450-1.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/03/Web-Banner-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/03/Web-Banner-1920-x-450.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/12/KV-02-Silver-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/12/KV-02-Silver-1920-x-450.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 6 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/10/corolla-cover-mobile.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/10/corolla-cover.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 7 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/11/IMC-EComm-Banner-800-x-1000-1.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/11/IMC-EComm-Banner-1920-x-450-1.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 8 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/04/800-x-1000-Fortuner-GR.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/03/Fortuner-1920-x-450-KV-1.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 9 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/04/800-x-1000-Corolla.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/03/CorollaAltis-CVT-i-1920by450.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+            <!-- Item 10 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/05/chat-bot-mob-banner-updated.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/05/chat-bot-banner.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+        </div>
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="5"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="6"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="7"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="8"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="9"></button>
+        </div>
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+
+    <!-- slider ends here -->
+
+
+    <!-- title 1 start -->
+
+        <h1 class="h-fit w-fit bg-red-300 mx-auto mt-20 text-3xl mb-6">Explore your ideal Toyota</h1>
+        <p class="h-fit w-fit bg-red-600 mx-auto text-md tracking-wider">A Symbol of Quality, Durability and Reliability</p>
+
+    <!-- title 1 end  -->
+
+
+    <!-- car btns start  -->
+
+    <div class="h-10 w-[85%] flex justify-between bg-red-500 mx-auto mt-14 lg:w-[45%] ">
+        <button id="btn1" class="h-full w-[24%] rounded-2xl bg-gray-200 text-[12px] lg:rounded-none lg:bg-white lg:text-[17px] lg:w-fit lg:p-0 font-bold">Cars & MVPs</button>
+        <button id="btn2" class="h-full w-[24%] rounded-2xl bg-gray-200 text-[12px] lg:rounded-none lg:bg-white lg:text-[17px] lg:w-fit lg:p-0 font-bold">SUVs & Pickups</button>
+        <button id="btn3" class="h-full w-[24%] rounded-2xl bg-gray-200 text-[12px] lg:rounded-none lg:bg-white lg:text-[17px] lg:w-fit lg:p-0 font-bold">Buses & Vans</button>
+        <button id="btn4" class="h-full w-[24%] rounded-2xl bg-gray-200 text-[12px] lg:rounded-none lg:bg-white lg:text-[17px] lg:w-fit lg:p-0 font-bold">Gazoo Racing</button>
+    </div>
+
+    <!-- gpt with modifications -->
+     <!-- CARS & MVPS start -->
+    <div id="gallery1" class="gallery"> 
+        <div class="bg-red-400 lg:flex lg:justify-evenly lg:mt-10">
+            <!-- COROLLA start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="h-[27em] w-[80%] mt-10 mx-auto lg:h-[18rem] lg:w-[50%] lg:m-0 lg:mt-2" src="https://toyota-indus.com/wp-content/uploads/2023/03/corolla-400-x-500.png" alt="Gallery 1 Image 1">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Corolla Altis X</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Power. Prestige. Passion</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 5,969,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- only for lg -->
+            <div class="lg:hidden"> 
+                <p class="w-fit mx-auto text-black font-bold">Corolla X</p>
+                <p class="w-fit mx-auto text-gray-500">Starting from Rs 5,969,000/-</p>
+                <p class="w-fit mx-auto text-red-500">Find Out More</p>
+            </div>
+            <!-- only for lg -->
+            <!-- COROLLA end  -->
+
+            <!-- YARIS start -->
+            <div class="lg:flex lg:w-[30%]">
+                <img class="hidden lg:block lg:h-[16rem] lg:w-[45%] lg:mt-6" src="https://toyota-indus.com/wp-content/uploads/2024/05/PNG-2-1.png" alt="Gallery 1 Image 2">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Yaris</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Yaris is Here</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 4,479,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- YARIS end -->
+
+            <!-- CAMRY start  -->
+            <div class="lg:flex lg:w-[30%]">
+                <img class="hidden lg:block lg:h-64 lg:w-[50%]" src="https://toyota-indus.com/wp-content/uploads/2022/12/camry-discover-the-range.jpg" alt="Gallery 1 Image 3">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Camry Hybrid</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Striking Luxury</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Order Intake on Hold.</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- CAMERY end -->
+
+        </div>
+    </div>
+    <!-- CARS & MVPS end -->
+
+    <!-- SUV & PICKUP start  -->
+    <div id="gallery2" class="gallery">
+        <div class="bg-red-400 lg:flex lg:justify-evenly lg:mt-10">
+            <!-- HILUX start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="h-[27em] w-[80%] mt-10 mx-auto lg:h-[16rem] lg:w-[50%] lg:m-0" src="https://toyota-indus.com/wp-content/uploads/2022/11/HILUX-Single-Cabin-discover.png" alt="Gallery 2 Image 1">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Hilux</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Single Cabin</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 6,349,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+
+            <!-- only for lg -->
+            <div class="lg:hidden"> 
+                <p class="w-fit mx-auto text-black font-bold">Hilux Single Cabin</p>
+                <p class="w-fit mx-auto text-gray-500">Starting from Rs 6,349,000/-</p>
+                <p class="w-fit mx-auto text-red-500">Find Out More</p>
+            </div>
+            <!-- only for lg -->
+            <!-- HILUX end  -->
+
+            <!-- LAND CRUISER PRADO start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="hidden lg:block lg:h-[16rem] lg:w-[50%] " src="https://toyota-indus.com/wp-content/uploads/2024/05/Prado-400x400-1.png" alt="Gallery 2 Image 2">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Land Cruiser Prado</a>
+                    <p class="text-white h-fit w-fit mt-3 text-sm ml-6 bg-blue-400">Sophisticated with a Practical Purpose</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 66,600,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- LAND CRUISER PRADO end  -->
+
+            <!-- LAND CRUISER 300 start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="hidden lg:block lg:h-[16rem] lg:" src="https://toyota-indus.com/wp-content/uploads/2022/12/lc-300-discover-the-range.jpg" alt="Gallery 2 Image 3">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Land Cruiser 300</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">King of the road</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 120,000,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- LAND CRUISER 300 end -->
+        </div>
+    </div>
+    <!-- SUV & PICKUP end  -->
+
+    <!-- BUSES & VANS start  -->
+    <div id="gallery3" class="gallery">
+        <div class="bg-red-400 lg:flex lg:justify-evenly lg:mt-10">
+
+            <!-- HIACE start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="h-[27em] w-[80%] mt-10 mx-auto lg:h-[16rem] lg:w-[50%] lg:m-0" src="https://toyota-indus.com/wp-content/uploads/2022/12/hiace-discover-the-range.jpg" alt="Gallery 3 Image 1">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Hiace</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">A Trustworthy Partner</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Order Intake on Hold</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- only for lg -->
+            <div class="lg:hidden"> 
+                <p class="w-fit mx-auto text-black font-bold">Hiace</p>
+                <p class="w-fit mx-auto text-gray-500">Starting from Order Intake on Hold</p>
+                <p class="w-fit mx-auto text-red-500">Find Out More</p>
+            </div>
+            <!-- only for lg -->
+            <!-- HIACE end  -->
+
+            <!-- COASTER start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="hidden lg:block lg:h-[16rem] lg:w-[50%]" src="https://toyota-indus.com/wp-content/uploads/2022/12/coaster-discover-the-range.jpg" alt="Gallery 3 Image 2">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Coaster</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Dependable Transportation</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Order Intake on Hold</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- COASTER end  -->
+
+            <!-- HIACE DELUXE start  -->
+            <div class="lg:flex lg:w-[30%]">       
+                <img class="hidden lg:block lg:h-[16rem] lg:w-[50%]" src="https://toyota-indus.com/wp-content/uploads/2022/12/hiace-deluxe-discover-the-range.jpg" alt="Gallery 3 Image 3">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Hiace Deluxe</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Robustness</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Order Intake on Hold</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- HIACE DELUXE end  -->
+        </div>
+    </div>
+    <!-- BUSES & VANS end  -->
+
+    <!-- GAZOO RACING start -->
+    <div id="gallery4" class="gallery">
+        <div class="bg-red-400 lg:flex lg:justify-evenly lg:mt-10">
+
+            <!-- FORTUNER GR-S start  -->
+            <div class="lg:flex lg:w-[36%]">       
+                <img class="h-[27em] w-[80%] mt-10 mx-auto lg:h-[16rem] lg:w-[50%] lg:m-0 object-cover" src="https://toyota-indus.com/wp-content/uploads/2023/04/FortunerGRS-DR.jpg" alt="Gallery 4 Image 1">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Fortuner GR-S</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Built To Be Unbeatable</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 19,899,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- only for lg -->
+            <div class="lg:hidden"> 
+                <p class="w-fit mx-auto text-black font-bold">Fortuner GR-S</p>
+                <p class="w-fit mx-auto text-gray-500">Starting from Rs 19,899,000/-</p>
+                <p class="w-fit mx-auto text-red-500">Find Out More</p>
+            </div>
+            <!-- only for lg -->
+            <!-- FORTUNER GR-S end  -->
+
+            <!-- REVO GR-S start  -->
+            <div class="lg:flex lg:w-[36%]">       
+                <img class="hidden lg:block lg:h-[16rem] lg:w-[50%] object-cover" src="https://toyota-indus.com/wp-content/uploads/2023/04/Revo-GRS-DR.jpg" alt="Gallery 4 Image 2">
+                <div class="hidden lg:flex lg:flex-col lg:h-64 lg:w-[50%] bg-black ">
+                    <a class="text-white h-fit w-fit mt-10 text-2xl ml-6 bg-red-300" href="https://toyota-indus.com/corolla-x/">Revo GR-S</a>
+                    <p class="text-white h-fit w-fit mt-3 text-md ml-6 bg-blue-400">Built To Be Unbeatable</p>
+                    <p class="text-white h-fit w-fit mt-6 text-md ml-6 bg-green-400">Starting From </p>
+                    <p class="text-white h-fit w-fit text-md ml-6 bg-purple-200 font-bold">Rs 15,359,000/-</p>
+                    <a class="text-white h-fit w-fit bg-red-200 mx-auto my-2" href="https://toyota-indus.com/corolla-x/">Explore</a>
+                    <hr class="w-[80%] mx-auto">
+                </div>
+            </div>
+            <!-- REVO GR-S end  -->
+        </div>
+    </div>
+    <!-- GAOO RACING end  -->
+    
+    <!-- gpt  -->
+    <!-- car btns end  -->
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
