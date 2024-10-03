@@ -34,7 +34,7 @@
 //news slider start
 
     let currentSlide = 0;
-        const totalSlides = 7; // Number of images in the slider
+        const totalSlides = 13; // Number of images in the slider
         const slideWidth = 100 / 4; // Since we are showing 4 images at a time
     
         function moveCarousel(direction) {
