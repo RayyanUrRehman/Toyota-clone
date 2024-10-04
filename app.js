@@ -86,9 +86,9 @@
     // }, intervalTime);
 
 
-    
+
     let currentSlide = 0;
-    const totalSlides = 27; // Number of images in the slider
+    const totalSlides = 27; //27 Number of images in the slider
     const intervalTime = 3000; // Time interval in milliseconds (e.g., 3000ms = 3 seconds)
 
     // Function to determine how many slides to show based on screen size
