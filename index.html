@@ -28,6 +28,33 @@
             display: none;
         }
 
+        /* Style for hidden radio buttons */
+        input[type="radio"].hidden {
+            display: none;
+        }
+    
+        /* Styling the labels as buttons */
+        label {
+            display: inline-block;
+            padding: 10px;
+            background-color: lightgray;
+            text-align: center;
+        }
+    
+        /* When a radio button is checked, change the label's color */
+        input[type="radio"]:checked + label {
+            background-color: red;
+            color: white;
+        }
+    
+        /* Custom styles for better alignment (optional) */
+        label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
     </style>
 
 <body class="w-screen h-fit relative overflow-x-hidden">
@@ -220,9 +247,8 @@
         <div class="relative h-[35em] rounded-lg lg:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-1920-x-450-1.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-            </div>
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/04/800-x-1000-Fortuner-GR.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2023/03/Fortuner-1920-x-450-KV-1.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="https://toyota-indus.com/wp-content/uploads/2024/04/GROUP-800-x-1000.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -249,8 +275,9 @@
                 <img src="https://toyota-indus.com/wp-content/uploads/2023/11/IMC-EComm-Banner-1920-x-450-1.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
             <!-- Item 8 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                <img src="https://toyota-indus.com/wp-content/uploads/2023/04/800-x-1000-Fortuner-GR.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
-                <img src="https://toyota-indus.com/wp-content/uploads/2023/03/Fortuner-1920-x-450-KV-1.png" class="absolute hidden lg:w-full lg:h-fit lg:block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">            </div>
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-800x1000-1.jpg" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                <img src="https://toyota-indus.com/wp-content/uploads/2024/05/Web-Banner-1920-x-450-1.jpg" class="absolute hidden lg:w-full lg:h-fit lg:block  -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+            </div>
             <!-- Item 9 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
                 <img src="https://toyota-indus.com/wp-content/uploads/2023/04/800-x-1000-Corolla.png" class="absolute block w-full h-full lg:hidden -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
@@ -305,12 +332,26 @@
 
     <!-- car btns start  -->
 
-    <div class="lg:h-10 w-[50%] gap-2 lg:flex lg:flex-row lg:justify-between bg-white mx-auto mt-14 lg:w-[45%]  h-52 flex flex-col  ">
-        <button id="btn1" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px]  lg:text-[17px]  lg:p-0 font-bold">Cars & MVPs</button>
-        <button id="btn2" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px]  lg:text-[17px]  lg:p-0 font-bold">SUVs & Pickups</button>
-        <button id="btn3" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px]  lg:text-[17px]  lg:p-0 font-bold">Buses & Vans</button>
-        <button id="btn4" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px]  lg:text-[17px]  lg:p-0 font-bold">Gazoo Racing</button>
+    <div class="lg:h-10 w-[50%] gap-2 lg:flex lg:flex-row lg:justify-between bg-white mx-auto mt-14 lg:w-[45%] h-52 flex flex-col">
+        <!-- First button (radio + label) -->
+        <input type="radio" id="btn1" name="buttons" class="hidden" />
+        <label for="btn1" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px] lg:text-[17px] lg:p-0 font-bold flex justify-center items-center cursor-pointer">Cars & MVPs</label>
+    
+        <!-- Second button (radio + label) -->
+        <input type="radio" id="btn2" name="buttons" class="hidden" />
+        <label for="btn2" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px] lg:text-[17px] lg:p-0 font-bold flex justify-center items-center cursor-pointer">SUVs & Pickups</label>
+    
+        <!-- Third button (radio + label) -->
+        <input type="radio" id="btn3" name="buttons" class="hidden" />
+        <label for="btn3" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px] lg:text-[17px] lg:p-0 font-bold flex justify-center items-center cursor-pointer">Buses & Vans</label>
+    
+        <!-- Fourth button (radio + label) -->
+        <input type="radio" id="btn4" name="buttons" class="hidden" />
+        <label for="btn4" class="h-full lg:w-[24%] w-full rounded-2xl bg-gray-200 text-[12px] lg:text-[17px] lg:p-0 font-bold flex justify-center items-center cursor-pointer">Gazoo Racing</label>
     </div>
+    
+   
+    
 
     <!-- gpt with modifications -->
 
