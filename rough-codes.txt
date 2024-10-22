@@ -1,0 +1,98 @@
+-navbar rough code:
+    <!-- <div class="h-20 w-full navbar z-30 bg-white flex justify-between items-center ">
+            <div class="h-16 w-24 ml-10 lg:ml-40  ">
+                <img src="https://toyota-indus.com/wp-content/uploads/2022/08/ToyotaProductLogo_Primary_Black_RGB-1.png" alt="" class="h-full w-full ">
+            </div>
+            <div class="hidden lg:w-full lg:flex lg:justify-end ">
+                <ul class="flex w-fit justify-between gap-5 bg-white mr-[1%]">
+                    <li class="text-base hover:text-red-700 font-medium hover:border-b-red-700"><a href="#">HOME</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">SHOWROOM ▼</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">AFTER SALES ▼</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">CORPORATE</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">CAREERS ▼</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">START YOUR IMPOSSIBLE</a></li>
+                    <li class="text-base hover:text-red-700 font-medium"><a href="#">CONTACT US</a></li>
+                </ul> 
+            </div>
+
+            <div class=" h-[30%] w-full flex justify-end mr-[1%]  lg:hidden">
+                <img src="hamburger.png" alt="">
+            </div>
+
+            <div class="h-[40%] w-[10%] bg-[#ff0000] flex justify-center items-center lg:h-full lg:w-28">
+                <img class="h-7 " src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo33UGFSv_2r0t4F7jyfK0jTjda773JR4eqA&s" alt="">
+            </div>
+        </div> -->
+
+
+-JS with comments:
+
+    // car slider start 
+
+        // JavaScript to handle button clicks
+        document.getElementById('btn1').addEventListener('click', function () {
+            showGallery('gallery1');
+        });
+        document.getElementById('btn2').addEventListener('click', function () {
+            showGallery('gallery2');
+        });
+        document.getElementById('btn3').addEventListener('click', function () {
+            showGallery('gallery3');
+        });
+        document.getElementById('btn4').addEventListener('click', function () {
+            showGallery('gallery4');
+        });
+
+        function showGallery(galleryId) {
+            // Hide all galleries
+            var galleries = document.querySelectorAll('.gallery');
+            galleries.forEach(function (gallery) {
+                gallery.style.display = 'none';
+            });
+
+            // Show the selected gallery
+            document.getElementById(galleryId).style.display = 'block';
+        }
+
+        // Optionally, show the first gallery by default
+        showGallery('gallery1');
+
+    // car slider end
+
+
+    // news slider start 
+
+        let currentSlide = 0;
+        const totalSlides = 27; //27 Number of images in the slider
+        const intervalTime = 3000; // Time interval in milliseconds (e.g., 3000ms = 3 seconds)
+
+        // Function to determine how many slides to show based on screen size
+        function getSlidesToShow() {
+            return window.innerWidth >= 768 ? 4 : 1; // 4 slides for large screens, 1 slide for mobile (768px breakpoint)
+        }
+
+        // Function to get the width of a single slide based on the carousel's actual width
+        function getSlideWidth() {
+            const carousel = document.getElementById('carousel-images');
+            const slidesToShow = getSlidesToShow();
+            return carousel.clientWidth / slidesToShow; // Get the width of one slide in pixels
+        }
+
+        function moveCarousel(direction) {
+            const carousel = document.getElementById('carousel-images');
+            const slideWidth = getSlideWidth(); // Get the width of one slide in pixels
+            const slidesToShow = getSlidesToShow();
+
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides; // Update the current slide index
+            const offset = -(currentSlide * slideWidth); // Calculate the pixel offset
+            carousel.style.transform = `translateX(${offset}px)`; // Move the carousel using pixel values
+            carousel.style.transition = 'transform 0.5s ease'; // Smooth transition
+        }
+
+        // Automatically move the carousel every intervalTime
+        setInterval(() => {
+            moveCarousel(1); // Move the carousel forward by 1 slide every 3 seconds
+        }, intervalTime);
+
+
+    // news slider end 
